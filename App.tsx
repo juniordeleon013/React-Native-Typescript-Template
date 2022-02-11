@@ -5,13 +5,16 @@ import {
   View,
 } from 'react-native';
 import { MyAppNavigation } from './src/navigation/AppNavigation';
+import { AuthState } from './src/domain/authcontext/AuthContext';
 
 
 const App = () => {
 
   return (
     <View style={{ flex: 1 }}>
-      <MyAppNavigation />
+      <AuthState>
+        <MyAppNavigation />
+      </AuthState>
     </View>
   );
 };
